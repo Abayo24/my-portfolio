@@ -289,7 +289,7 @@ export default function Portfolio() {
           </div>
 
           <div className="mt-12 flex gap-6 text-slate-500">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Github size={24} /></a>
+            <a href="https://github.com/Abayo24" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Github size={24} /></a>
             <a href="https://linkedin.com/in/abayoakinyi" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition-colors"><Linkedin size={24} /></a>
             <a href="mailto:abayoakinyi@outlook.com" className="hover:text-purple-400 transition-colors"><Mail size={24} /></a>
           </div>
