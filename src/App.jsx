@@ -33,7 +33,7 @@ const experiences = [
   {
     company: "Fertitude",
     role: "Software Engineer Intern",
-    period: "Aug 2025 - Oct 2025",
+    period: "Aug 2025 - Present",
     type: "Remote",
     description: "Redesigning core web architecture and ensuring code quality.",
     achievements: [
@@ -41,7 +41,7 @@ const experiences = [
       "Implemented strict commit message standards to improve repository maintainability.",
       "Collaborated with stakeholders to estimate timelines and verify product success metrics."
     ],
-    tech: ["React.js","Material UI","Git", "Typescript"]
+    tech: ["React.js", "Git", "UI/UX"]
   },
   {
     company: "Bundi Insights",
@@ -103,11 +103,6 @@ const skills = [
 ];
 
 const certifications = [
-  "Google Cloud Skills - Google Skills",
-  "Virtual Assistance - ALX",
-  "Freelance Academy - ALX",
-  "AI Starter kit - ALX",
-  "Acyberschool secure+ - Acyberschool",
   "Software Engineering - ALX",
   "Foundations of User Experience (UX) Design - Google",
   "Introduction to Cybersecurity - Cisco",
@@ -115,6 +110,33 @@ const certifications = [
   "JavaScript Essentials - Cisco Networking Academy",
   "Web Development Program Boot Camp - eMobilis",
   "Certificate in Business IT - Institute of Advanced Technology"
+];
+
+const projects = [
+  {
+    title: "Fertitude Platform Redesign",
+    link: "https://www.fertitude.com/",
+    description: "A complete UI overhaul using modular React and Material UI components. Improved code maintainability and user engagement metrics.",
+    tags: ["Typescript", "React.js", "MaterialUI", "Git"],
+    image: "/fertitude.png", // Replace with your own image path
+    themeColor: "blue"
+  },
+  {
+    title: "Mobile Design System",
+    link: "https://www.figma.com/design/18118ozHp5li89AzZhnwPf/Me4U-UI-UX?node-id=0-1&t=yDhXvkIJX8LCXExI-1",
+    description: "Created a scalable design system and high-fidelity prototypes in Figma to streamline mobile app development.",
+    tags: ["Figma", "Prototyping", "Mobile"],
+    image: "/Me4U.png", // Replace with your own image path
+    themeColor: "purple"
+  },
+  {
+    title: "Bundi Insights Backend",
+    link: "https://afridatainsights.co.ke/",
+    description: "Robust backend architecture development focusing on efficiency and frontend integration.",
+    tags: ["Python", "API", "Agile"],
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800&h=500", // Replace with your own image path
+    themeColor: "teal"
+  }
 ];
 
 // --- Components ---
@@ -258,7 +280,7 @@ export default function Portfolio() {
               View My Work <ChevronRight size={18} />
             </button>
             <a
-              href="/abayo-akinyi-CV.pdf" // Placeholder path
+              href="/resume.pdf" // Placeholder path
               download
               className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-medium transition-all flex items-center justify-center gap-2 border border-slate-700"
             >
@@ -267,9 +289,9 @@ export default function Portfolio() {
           </div>
 
           <div className="mt-12 flex gap-6 text-slate-500">
-            <a href="https://github.com/Abayo24" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Github size={24} /></a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Github size={24} /></a>
             <a href="https://linkedin.com/in/abayoakinyi" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition-colors"><Linkedin size={24} /></a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=akinyi.dev@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors"><Mail size={24} /></a>
+            <a href="mailto:abayoakinyi@outlook.com" className="hover:text-purple-400 transition-colors"><Mail size={24} /></a>
           </div>
         </div>
       </section>
@@ -305,7 +327,7 @@ export default function Portfolio() {
               <div>
                 <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-wider">Key Coursework</div>
                 <div className="flex flex-wrap gap-2">
-                  {["OOP in Java", "Compilers", "Algorithms", "Data Structures", "OS"].map(course => (
+                  {["OOP in C++", "Compilers", "Algorithms", "Data Structures", "OS"].map(course => (
                     <span key={course} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded">
                       {course}
                     </span>
@@ -358,75 +380,55 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section (Conceptual based on experience) */}
+      {/* Projects Section */}
       <section id="projects" className="py-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto px-4">
           <SectionTitle>Featured Work</SectionTitle>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            {/* Project 1: Fertitude Redesign */}
-            <div className="group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 flex flex-col">
-              <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center group-hover:from-blue-900/20 group-hover:to-purple-900/20 transition-all">
-                <Layout size={48} className="text-slate-600 group-hover:text-blue-400 transition-colors" />
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-white">Fertitude Platform Redesign</h3>
-                  <a href="https://www.fertitude.com/" target="_blank" rel="noreferrer"className="text-slate-500 hover:text-blue-400"><ExternalLink size={18} /></a>
-                </div>
-                <p className="text-slate-400 text-sm mb-4 flex-1">
-                  A complete UI overhaul using modular React and Material UI components. Improved code maintainability and user engagement metrics.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="text-xs font-medium text-blue-400">Typescript</span>
-                  <span className="text-xs font-medium text-blue-400">React.js</span>
-                  <span className="text-xs font-medium text-blue-400">MaterialUI</span>
-                  <span className="text-xs font-medium text-blue-400">Git</span>
-                </div>
-              </div>
-            </div>
+            {projects.map((project, index) => {
+              // Dynamic color classes based on the theme color we set in the data
+              const themeClasses = {
+                blue: { border: "hover:border-blue-500/50", text: "text-blue-400" },
+                purple: { border: "hover:border-purple-500/50", text: "text-purple-400" },
+                teal: { border: "hover:border-teal-500/50", text: "text-teal-400" }
+              };
+              const theme = themeClasses[project.themeColor] || themeClasses.blue;
 
-            {/* Project 2: Memail Design System */}
-            <div className="group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 flex flex-col">
-              <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center group-hover:from-purple-900/20 group-hover:to-pink-900/20 transition-all">
-                <Smartphone size={48} className="text-slate-600 group-hover:text-purple-400 transition-colors" />
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-white">Mobile Design System</h3>
-                  <a href="https://www.figma.com/design/18118ozHp5li89AzZhnwPf/Me4U-UI-UX?node-id=0-1&t=yDhXvkIJX8LCXExI-1" className="text-slate-500 hover:text-blue-400"><ExternalLink size={18} /></a>
-                </div>
-                <p className="text-slate-400 text-sm mb-4 flex-1">
-                  Created a scalable design system and high-fidelity prototypes in Figma to streamline mobile app development.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="text-xs font-medium text-purple-400">Figma</span>
-                  <span className="text-xs font-medium text-purple-400">Prototyping</span>
-                  <span className="text-xs font-medium text-purple-400">Mobile</span>
-                </div>
-              </div>
-            </div>
+              return (
+                <div key={index} className={`group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden ${theme.border} transition-all duration-300 flex flex-col`}>
+                  {/* Image Container with hover zoom effect */}
+                  <div className="h-48 overflow-hidden relative bg-slate-800">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Dark overlay to make it blend well with the dark mode aesthetic */}
+                    <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                  </div>
 
-            {/* Project 3: Backend Logic */}
-            <div className="group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-teal-500/50 transition-all duration-300 flex flex-col">
-              <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center group-hover:from-teal-900/20 group-hover:to-emerald-900/20 transition-all">
-                <Database size={48} className="text-slate-600 group-hover:text-teal-400 transition-colors" />
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-white">Bundi Insights Backend</h3>
-                  <a href="https://afridatainsights.co.ke/" className="text-slate-500 hover:text-blue-400"><ExternalLink size={18} /></a>
+                  <div className="p-6 flex-1 flex flex-col">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                      <a href={project.link} target="_blank" rel="noreferrer" className={`text-slate-500 hover:${theme.text} transition-colors`}>
+                        <ExternalLink size={18} />
+                      </a>
+                    </div>
+                    <p className="text-slate-400 text-sm mb-4 flex-1">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className={`text-xs font-medium ${theme.text}`}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <p className="text-slate-400 text-sm mb-4 flex-1">
-                  Robust backend architecture development focusing on efficiency and frontend integration.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <span className="text-xs font-medium text-teal-400">Python</span>
-                  <span className="text-xs font-medium text-teal-400">API</span>
-                  <span className="text-xs font-medium text-teal-400">Agile</span>
-                </div>
-              </div>
-            </div>
+              );
+            })}
 
           </div>
         </div>
@@ -484,7 +486,7 @@ export default function Portfolio() {
                 <Mail size={24} />
               </div>
               <span className="text-white font-medium">Email Me</span>
-              <span className="text-xs text-slate-500">akinyi.dev@gmail.com</span>
+              <span className="text-xs text-slate-500">abayoakinyi@outlook.com</span>
             </a>
 
             <a href="https://linkedin.com/in/abayoakinyi" target="_blank" rel="noreferrer" className="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-blue-500 transition-all group flex flex-col items-center gap-3">
