@@ -280,7 +280,7 @@ export default function Portfolio() {
               View My Work <ChevronRight size={18} />
             </button>
             <a
-              href="/resume.pdf" // Placeholder path
+              href="/abayo-akinyi-CV.pdf" // Placeholder path
               download
               className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-medium transition-all flex items-center justify-center gap-2 border border-slate-700"
             >
